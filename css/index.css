@@ -99,8 +99,19 @@ body {
 
 .slideshow-button {
 	position: absolute;
+
 	width: 50px;
-	height: 50px;
+	height: 70px;
+
+	font-size: 30px;
+
+	border: none;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.141);
+}
+
+.slideshow-button:hover {
+	background-color: rgba(0, 0, 0, 0.213);
 }
 
 #slideshow-button__previous {
