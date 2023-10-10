@@ -2,6 +2,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	background-color: rgb(250, 250, 250);
 }
 
 .slideshow-container {
@@ -13,8 +14,6 @@ body {
 	height: 75%;
 
 	margin-top: 40px;
-
-	background-color: lightgrey;
 }
 
 /* --------------------- images container ----------------------- */
@@ -61,13 +60,40 @@ body {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	justify-content: space-around;
+	justify-content: space-between;
 
 	width: 100%;
 	height: 8%;
+	border-radius: 15px;
+	padding: 5px;
 
-	background-color: rgb(255, 84, 178);
+	background-color: #FF44A9;
 }
+
+.stepper-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 12%;
+	height: 100%;
+	border-radius: 15px;
+
+	border: none;
+	background: none;
+	color: white;
+
+	font-size: 15px;
+}
+
+.stepper-button:hover {
+	background-color: #de2e8c;
+}
+
+.stepper-button__chosen {
+	background-color: #C01571;
+}
+
 
 /* --------------------- previous and next buttons ----------------------- */
 
