@@ -10,8 +10,40 @@
 	</head>
 
 	<body>
+		<h1>My slideshow</h1>
+		
+		<div class="slideshow-container">
+
+			<!-- --------------------- stepper --------------------- -->
+			<div class="stepper-container">
+				<button class="stepper-button">Image 1</button>
+				<button class="stepper-button">Image 2</button>
+				<button class="stepper-button">Image 3</button>
+				<button class="stepper-button">Image 4</button>
+				<button class="stepper-button">Image 5</button>
+			</div>
+
+			<!-- --------------------- images --------------------- -->
+			<div class="images-container">
+				<img class="image" src="images/cat1.avif">
+				<img class="image" src="images/cat2.webp">
+				<img class="image" src="images/cat3.webp">
+				<img class="image" src="images/cat4.jpeg">
+				<img class="image" src="images/cat5.jpeg">
+			</div>
+
+			<!-- --------------------- description box --------------------- -->
+			<div class="image-description-container">
+				<span class="image-description">Image description</span>
+			</div>
+
+			<!-- --------------------- previous and next buttons --------------------- -->
+			<button class="slideshow-button slideshow-button__previous">&#10094;</button>
+			<button class="slideshow-button slideshow-button__next">&#10095;</button>
+		</div>
 
 	</body>
+
 	<script src="js/index.js"></script>
 
 </html>
