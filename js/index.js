@@ -6,11 +6,14 @@ const descriptionStrings =
 "Image 4 description",
 "Image 5 description"]
 
-/* ----------------------  ------------------------ */
+/* ------------------------------------------------------------------- */
 
 let slideIndex = 0;
 
 showSlide(slideIndex); // begin with showing image 1 (slides[0])
+
+
+/* ---------------------- previous and next buttons ------------------------ */
 
 let previousButton = document.querySelector("#slideshow-button__previous");
 let nextButton = document.querySelector("#slideshow-button__next");
@@ -19,21 +22,28 @@ let nextButton = document.querySelector("#slideshow-button__next");
 previousButton.addEventListener("click", () => changeIndex(-1)); 
 nextButton.addEventListener("click", () => changeIndex(1));
 
-let stepperButtons = document.querySelectorAll(".stepper-button");
-
-stepperButtons.forEach((button, i) => {
-    button.addEventListener("click", () => {
-        currentSlide(i);
-    });
-});
-
-function currentSlide(n) {
-	showSlide(slideIndex = n);
-}
-
 function changeIndex(n) {
 	showSlide(slideIndex += n); // decrease/increase slideIndex with 1
 }
+
+
+/* ---------------------- stepper buttons ------------------------ */
+
+let stepperButtons = document.querySelectorAll(".stepper-button");
+
+// go through stepperButtons one by one and call currentSlide if clicked
+stepperButtons.forEach((button, i) => {
+    button.addEventListener("click", () => {
+        currentSlide(i); // call currentSlide with corresponding button index
+    });
+});
+
+function currentSlide(n) { // inpspired from https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp
+	showSlide(slideIndex = n); // slideIndex equals stepperButton index
+}
+
+
+/* ---------------------- this is where the magic happens ------------------------ */
 
 function showSlide(n) {
 	let slides = document.querySelectorAll(".image");
