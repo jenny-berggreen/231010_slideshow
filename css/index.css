@@ -95,6 +95,10 @@ body {
 	background-color: #C01571;
 }
 
+.stepper-button__animate {
+	transition: background-color 0.5s ease-in-out;
+}
+
 
 /* --------------------- previous and next buttons ----------------------- */
 
